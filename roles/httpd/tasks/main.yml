@@ -10,10 +10,3 @@
     name: httpd
     state: started
     enabled: true
-
-- name: Allow FW port
-  firewalld:
-    port: 80/tcp
-    permanent: true
-    immediate: true
-    state: enabled
