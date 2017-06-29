@@ -1,0 +1,14 @@
+---
+name: Deploy webcontent
+hosts: {{ webGroup }}
+remote_user: root
+
+tasks:
+  - name: check httpd
+    shell: rpm -q httpd
+    register: rpm_check
+
+
+roles:
+  - webcontent
+    when: rpm_check.rc == 0

@@ -1,0 +1,19 @@
+---
+# tasks file for httpd
+- name: Install httpd
+  yum:
+    name: httpd
+    state: latest
+
+- name: Enable and start the httpd service
+  service:
+    name: httpd
+    state: started
+    enabled: true
+
+- name: Allow FW port
+  firewalld:
+    port: 80/tcp
+    permanent: true
+    immediate: true
+    state: enabled

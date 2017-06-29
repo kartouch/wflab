@@ -1,0 +1,12 @@
+---
+# tasks file for webcontent
+- name: Copy template
+  template:
+    src: templates/index.j2
+    dest: /var/www/html/index.html
+    owner: apache
+    group: apache
+    mode: 0644
+    setype: httpd_sys_content_t
+ notify:
+   - restart_httpd
