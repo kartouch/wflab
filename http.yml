@@ -1,7 +1,6 @@
 ---
 name: Configure httpd
-hosts: {{ webGroup }}
-remote_user: root
+hosts: '{{ web }}'
 
 roles:
   - httpd

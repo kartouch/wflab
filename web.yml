@@ -1,7 +1,6 @@
 ---
 name: Deploy webcontent
-hosts: {{ webGroup }}
-remote_user: root
+hosts: '{{ web }}'
 
 tasks:
   - name: check httpd
