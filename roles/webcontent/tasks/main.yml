@@ -8,5 +8,5 @@
     group: apache
     mode: 0644
     setype: httpd_sys_content_t
- notify:
-   - restart_httpd
+  notify:
+    - restart_httpd
