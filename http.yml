@@ -1,6 +1,5 @@
 ---
-name: Configure httpd
-hosts: '{{ web }}'
-
-roles:
-  - httpd
+- name: Install httpd
+  hosts: all
+  roles:
+    - httpd

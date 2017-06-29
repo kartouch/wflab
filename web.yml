@@ -1,6 +1,6 @@
 ---
 name: Deploy webcontent
-hosts: '{{ web }}'
+hosts: all
 
 tasks:
   - name: check httpd
