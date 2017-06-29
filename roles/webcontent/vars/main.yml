@@ -1,5 +1,5 @@
 ---
 # vars file for webcontent
-welcome_message = 'Hello!'
-body_message = "I am {{ ansible_fqdn }}"
-footer_message = "CEE-AN-123"
+welcome_message: 'Hello!'
+body_message: "I am {{ ansible_fqdn }}"
+footer_message: "CEE-AN-123"
